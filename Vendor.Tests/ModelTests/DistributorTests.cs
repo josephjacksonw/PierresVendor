@@ -29,8 +29,7 @@ namespace Vendor.Tests
       Distributor newDistributor = new Distributor(name);
 
       //Act
-      // string result = newDistributor.Name;
-      string result = "good fail";
+      string result = newDistributor.Name;
 
       //Assert
       Assert.AreEqual(name, result);
@@ -44,8 +43,7 @@ namespace Vendor.Tests
       Distributor newDistributor = new Distributor(name);
 
       //Act
-      // int result = newDistributor.Id;
-      int result = 33;
+      int result = newDistributor.Id;
 
       //Assert
       Assert.AreEqual(1, result);
