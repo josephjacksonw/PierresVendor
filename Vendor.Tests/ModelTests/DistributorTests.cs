@@ -18,8 +18,7 @@ namespace Vendor.Tests
     public void DistributorConstructor_CreatesInstanceOfDistributor_Distributor()
     {
       Distributor newDistributor = new Distributor("test distributor");
-      string goodfail = new String("here's a fail");
-      Assert.AreEqual(typeof(Distributor), goodfail.GetType());
+      Assert.AreEqual(typeof(Distributor), newDistributor.GetType());
     }
 
   //   [TestMethod]
