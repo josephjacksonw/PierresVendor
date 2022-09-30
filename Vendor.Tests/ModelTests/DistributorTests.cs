@@ -21,51 +21,53 @@ namespace Vendor.Tests
       Assert.AreEqual(typeof(Distributor), newDistributor.GetType());
     }
 
-  //   [TestMethod]
-  // public void GetName_ReturnsName_String()
-  // {
-  //   //Arrange
-  //   string name = "Test Artist";
-  //   Artist newArtist = new Artist(name);
+    [TestMethod]
+    public void GetName_ReturnsName_String()
+    {
+      //Arrange
+      string name = "Test Distributor";
+      Distributor newDistributor = new Distributor(name);
 
-  //   //Act
-  //   string result = newArtist.Name;
+      //Act
+      // string result = newDistributor.Name;
+      string result = "good fail";
 
-  //   //Assert
-  //   Assert.AreEqual(name, result);
-  // }
+      //Assert
+      Assert.AreEqual(name, result);
+    }
 
-  //   [TestMethod]
-  // public void GetId_ReturnsArtistId_Int()
-  // {
-  //   //Arrange
-  //   string name = "Test Artist";
-  //   Artist newArtist = new Artist(name);
+    [TestMethod]
+    public void GetId_ReturnsDistributorId_Int()
+    {
+      //Arrange
+      string name = "Test Distributor";
+      Distributor newDistributor = new Distributor(name);
 
-  //   //Act
-  //   int result = newArtist.Id;
+      //Act
+      // int result = newDistributor.Id;
+      int result = 33;
 
-  //   //Assert
-  //   Assert.AreEqual(1, result);
-  // }
+      //Assert
+      Assert.AreEqual(1, result);
+    }
 
-  //   [TestMethod]
-  // public void AddAlbum_AssociatesAlbumWithArtist_AlbumList()
-  // {
-  //   //Arrange
-  //   string description = "Walk the dog.";
-  //   Album newAlbum = new Album(description);
-  //   List<Album> newList = new List<Album> { newAlbum };
-  //   string name = "Work";
-  //   Artist newArtist = new Artist(name);
-  //   newArtist.AddAlbum(newAlbum);
+    // [TestMethod]
+    // public void AddAlbum_AssociatesAlbumWithDistributor_AlbumList()
+    // {
+    //   //Arrange
+    //   string description = "Walk the dog.";
+    //   Album newAlbum = new Album(description);
+    //   List<Album> newList = new List<Album> { newAlbum };
+    //   string name = "Work";
+    //   Distributor newDistributor = new Distributor(name);
+    //   newDistributor.AddAlbum(newAlbum);
 
-  //   //Act
-  //   List<Album> result = newArtist.Albums;
+    //   //Act
+    //   List<Album> result = newDistributor.Albums;
 
-  //   //Assert
-  //   CollectionAssert.AreEqual(newList, result);
-  // }
+    //   //Assert
+    //   CollectionAssert.AreEqual(newList, result);
+    // }
 
 
   }
