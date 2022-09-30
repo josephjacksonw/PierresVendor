@@ -18,7 +18,7 @@ namespace Vendor.Tests
     public void OrderConstructor_CreatesInstanceOfOrder_Order()
     {
       Order newOrder = new Order("test");
-      Assert.AreEqual(typeof(String), newOrder.GetType());
+      Assert.AreEqual(typeof(Order), newOrder.GetType());
     }
 
     [TestMethod]
@@ -26,12 +26,11 @@ namespace Vendor.Tests
     {
       // Arrange
       string description = "Walk the dog.";
-      string description1 = "Malk the dog.";
       Order newOrder = new Order(description);
       // Act
       string result = newOrder.Description;
       // Assert
-      Assert.AreEqual(description1, result);
+      Assert.AreEqual(description, result);
     }
 
     [TestMethod]
@@ -45,21 +44,17 @@ namespace Vendor.Tests
       newOrder.Description = updatedDescription;
       string result = newOrder.Description;
       //Assert
-      Assert.AreEqual(description, result);
+      Assert.AreEqual(updatedDescription, result);
     }
 
     [TestMethod]
     public void GetAll_ReturnsEmptyList_OrderList()
     {
       // Arrange
-      string description01 = "Walk the dog";
-      string description02 = "Wash the dishes";
-      Order newOrder1 = new Order(description01);
-      Order newOrder2 = new Order(description02);
-      
+      List<Order> newList = new List<Order> {};
       // Act
       List<Order> result = Order.GetAll();
-      List<Order> newList = new List<Order> { newOrder1 };
+      
       // Assert
       CollectionAssert.AreEqual(newList, result);
     }
@@ -72,7 +67,7 @@ namespace Vendor.Tests
       string description02 = "Wash the dishes";
       Order newOrder1 = new Order(description01);
       Order newOrder2 = new Order(description02);
-      List<Order> newList = new List<Order> { newOrder1 };
+      List<Order> newList = new List<Order> { newOrder1, newOrder2 };
       //Act
       List<Order> result = Order.GetAll();
       //Assert
@@ -87,7 +82,7 @@ namespace Vendor.Tests
       //Act
       int result = newOrder.Id;
       //Assert
-      Assert.AreEqual(2, result);
+      Assert.AreEqual(1, result);
     }
       [TestMethod]
     public void Find_ReturnsCorrectOrder_Order()
@@ -98,7 +93,7 @@ namespace Vendor.Tests
       Order newOrder = new Order(description01);
       Order newOrder2 = new Order(description02);
       //Act
-      Order result = Order.Find(1);
+      Order result = Order.Find(2);
       //Assert
       Assert.AreEqual(newOrder2, result);
     }
