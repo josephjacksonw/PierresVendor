@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Pierre's Vendor!</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="~/css/styles.css" />
+  </head>
+  <body>
+    @using Vendor.Models;
+
+    <h1>JFSLKJFKSDLJFLSJFLJSFKSLJFKSDLJFLSDKJFJSDLFJKLSDFJ</h1>
+    <h1>you are on the order index page</h1>
+
+    @if (Model.Count == 0)
+    {
+      <p>There are no orders in the list.</p>
+    }
+    <ul>
+      @foreach (Order order in Model)
+      {
+        <li><a href="/orders/@order.Id">@order.Description</a></li>
+      }
+    </ul>
+    <a href="/orders/new">Add a new order.</a>
+    <form action="/orders/delete" method="post">
+      <button type="submit" name="button">Clear List</button>
+    </form>
+  </body>
+</html>

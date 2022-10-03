@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Pierre's Vendor!</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="~/css/styles.css" />
+  </head>
+  <body>
+    <h1>Become a distributor</h1>
+    <p>Add your company's details here:</p>
+
+    <form action="/distributors" method="post">
+      <label for="distributorName">Your company's name: </label>
+      <input id="distributorName" name="distributorName" type="text">
+      <label for="distributorDescription">Description of your company</label>
+      <input id="distributorDescription" name="distributorDescription" type="text">
+      <button type="submit">Add</button>
+    </form>
+
+    <p><a href="/">Back home</a></p>
+    <p><a href="/distributors">Back to distributors.</a></p>
+  </body>
+</html>

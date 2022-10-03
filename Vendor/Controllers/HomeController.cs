@@ -11,11 +11,5 @@ namespace Vendor.Controllers
         return View();
       }
 
-      // [Route("/bakery_photos")]
-      // public ActionResult FavoritePhotos()
-      // {
-      //   return View();
-      // }
-
     }
 }
